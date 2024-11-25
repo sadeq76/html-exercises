@@ -1,0 +1,73 @@
+<!-- Declares the document as HTML5. Helps browsers know the HTML version. -->
+<!DOCTYPE html>
+
+<!-- The root element of the HTML document. Encloses all content. -->
+<html lang="en">
+  <head>
+    <!-- Contains metadata (not displayed on the page). -->
+
+    <!-- Sets a base URL for all relative links and defines a default target for hyperlinks and forms. -->
+    <base href="https://sadeqshahmoradi.ir/" target="_blank" />
+
+    <!-- Specifies the character encoding and makes the page mobile-friendly. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links to external resources, like stylesheets or icons. -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <!-- <link rel="manifest" href="manifest.json" /> -->
+
+    <!-- Sets the title of the page (appears in the browser tab). -->
+    <title>Document Structure</title>
+
+    <!-- Adds JavaScript directly or links to an external file. -->
+    <script>
+      console.log("Hello World from the head script!");
+    </script>
+  </head>
+
+  <body>
+    <!-- Contains the content visible to the user. -->
+
+    <!-- Navigation for the website. Usually placed near the top. -->
+    <nav>Navbar</nav>
+
+    <!-- Represents introductory content like a page title or summary.
+         Typically placed at the top of the page or inside sections. -->
+    <header>
+      <h1>Document Structure</h1>
+      <p>This is a document structure exercise.</p>
+    </header>
+
+    <!-- Represents the main content of the page. Only one <main> per page. -->
+    <main>
+      <!-- Represents self-contained content, such as a blog post or article. -->
+      <article>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fugiat
+        unde dolorum, eveniet doloribus officiis mollitia eum iste quam
+        possimus, non sunt voluptas reprehenderit suscipit a dolor itaque,
+        voluptatem veritatis.
+      </article>
+
+      <!-- Groups related content into a distinct section. -->
+      <section>
+        <!-- The base tag makes this link point to https://sadeqshahmoradi.ir/src/pages/contact.html. -->
+        <a href="src/pages/contact.html">Visit Page</a>
+      </section>
+
+      <!-- Represents content related to the main content, like sidebars or tips.
+           Typically placed beside or below the main content. -->
+      <aside>This is aside</aside>
+    </main>
+
+    <!-- Footer content, usually for copyright, links, or contact info.
+         Typically placed at the bottom of the page. -->
+    <footer>Powered by Sadeq Shahmoradi</footer>
+
+    <!-- Adds JavaScript directly or links to an external file. -->
+    <script>
+      console.log("Hello World from the body script!");
+    </script>
+  </body>
+</html>

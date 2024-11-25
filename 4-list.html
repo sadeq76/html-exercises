@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Lists</title>
+  </head>
+  <body>
+    <h1>HTML Lists Example</h1>
+
+    <!-- Unordered list (<ul>): 
+    Creates a bulleted list where the order of items doesn't matter. -->
+    <h2>Unordered List</h2>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <!-- Ordered list (<ol>): 
+    Creates a numbered list where the order of items matters. -->
+    <h2>Ordered List</h2>
+    <ol>
+      <li>Step 1: Gather ingredients</li>
+      <li>Step 2: Mix ingredients</li>
+      <li>Step 3: Bake the cake</li>
+    </ol>
+
+    <!-- Description list (<dl>): 
+    Used for key-value pairs, like terms and their descriptions. -->
+    <h2>Description List</h2>
+    <dl>
+      <!-- <dt> defines the term -->
+      <dt>HTML</dt>
+      <!-- <dd> defines the description -->
+      <dd>A markup language for creating web pages.</dd>
+
+      <dt>CSS</dt>
+      <dd>A stylesheet language for designing web pages.</dd>
+
+      <dt>JavaScript</dt>
+      <dd>A programming language for making web pages interactive.</dd>
+    </dl>
+
+    <!-- Nested lists: A list inside another list -->
+    <h2>Nested List</h2>
+    <ul>
+      <li>
+        Fruits
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Cherry</li>
+        </ul>
+      </li>
+      <li>
+        Vegetables
+        <ul>
+          <li>Carrot</li>
+          <li>Broccoli</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Ordered list with custom type attribute -->
+    <!-- The type attribute can be "1", "A", "a", "I", or "i" -->
+    <h2>Custom Ordered List</h2>
+    <ol type="A">
+      <li>Option A</li>
+      <li>Option B</li>
+      <li>Option C</li>
+    </ol>
+
+    <!-- List with start attribute to change the starting number -->
+    <h2>Ordered List with Start Attribute</h2>
+    <ol start="5">
+      <li>Step 5: Cool the cake</li>
+      <li>Step 6: Serve and enjoy</li>
+    </ol>
+  </body>
+</html>

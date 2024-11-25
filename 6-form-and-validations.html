@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms with Validation</title>
+  </head>
+  <body>
+    <h1>HTML Forms with Validation</h1>
+
+    <!-- A comprehensive form with validation and address fields -->
+    <form action="/submit" method="POST">
+      <!-- Fieldset for personal information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <!-- Name input with basic validation -->
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+          pattern="[a-zA-Z\s]+"
+          title="Name should contain only letters and spaces"
+          required
+        />
+        <br /><br />
+
+        <!-- Email input with validation -->
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@mail.com"
+          required
+        />
+        <br /><br />
+
+        <!-- Password with validation -->
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          minlength="8"
+          placeholder="At least 8 characters"
+          title="Password must be at least 8 characters long"
+          required
+        />
+        <br /><br />
+
+        <!-- Phone number with validation -->
+        <label for="phone">Phone:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="\d{10}"
+          placeholder="1234567890"
+          title="Phone number must be 10 digits"
+          required
+        />
+        <br /><br />
+      </fieldset>
+
+      <!-- Fieldset for address -->
+      <fieldset>
+        <legend>Address Information</legend>
+
+        <!-- Street Address -->
+        <label for="street">Street Address:</label>
+        <input
+          type="text"
+          id="street"
+          name="street"
+          placeholder="123 Main St"
+          required
+        />
+        <br /><br />
+
+        <!-- City -->
+        <label for="city">City:</label>
+        <input
+          type="text"
+          id="city"
+          name="city"
+          placeholder="Your city"
+          pattern="[a-zA-Z\s]+"
+          title="City should contain only letters and spaces"
+          required
+        />
+        <br /><br />
+
+        <!-- State -->
+        <label for="state">State:</label>
+        <input
+          type="text"
+          id="state"
+          name="state"
+          placeholder="Your state"
+          pattern="[a-zA-Z\s]+"
+          title="State should contain only letters and spaces"
+          required
+        />
+        <br /><br />
+
+        <!-- ZIP Code -->
+        <label for="zip">ZIP Code:</label>
+        <input
+          type="text"
+          id="zip"
+          name="zip"
+          pattern="\d{5}"
+          placeholder="12345"
+          title="ZIP code must be 5 digits"
+          required
+        />
+        <br /><br />
+
+        <!-- Country -->
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">--Select your country--</option>
+          <option value="us">United States</option>
+          <option value="ca">Canada</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+        <br /><br />
+      </fieldset>
+
+      <!-- Survey fieldset -->
+      <fieldset>
+        <legend>Survey</legend>
+
+        <!-- Satisfaction Radio Buttons -->
+        <label>Are you satisfied?</label>
+        <input type="radio" id="yes" name="satisfaction" value="yes" required />
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="satisfaction" value="no" />
+        <label for="no">No</label>
+        <br /><br />
+
+        <!-- Skills Checkboxes -->
+        <label for="skills">Select your skills:</label>
+        <input type="checkbox" id="html" name="skills" value="html" />
+        <label for="html">HTML</label>
+        <input type="checkbox" id="css" name="skills" value="css" />
+        <label for="css">CSS</label>
+        <input type="checkbox" id="js" name="skills" value="js" />
+        <label for="js">JavaScript</label>
+        <br /><br />
+
+        <!-- Color Picker -->
+        <label for="favcolor">Choose your favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor" required />
+        <br /><br />
+
+        <!-- Date Picker -->
+        <label for="birthdate">Date of Birth:</label>
+        <input
+          type="date"
+          id="birthdate"
+          name="birthdate"
+          min="1900-01-01"
+          max="2024-12-31"
+          required
+        />
+        <br /><br />
+
+        <!-- Date and Time Picker -->
+        <label for="appointment">Appointment Date & Time:</label>
+        <input
+          type="datetime-local"
+          id="appointment"
+          name="appointment"
+          min="2024-01-01T00:00"
+          max="2025-01-01T23:59"
+          required
+        />
+        <br /><br />
+
+        <!-- Month Selector -->
+        <label for="birthmonth">Birth Month:</label>
+        <input
+          type="month"
+          id="birthmonth"
+          name="birthmonth"
+          min="2000-01"
+          max="2024-12"
+          required
+        />
+        <br /><br />
+
+        <!-- Number Input -->
+        <label for="quantity">Quantity (1 to 10):</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          max="10"
+          step="1"
+          required
+        />
+        <br /><br />
+
+        <!-- Range Slider -->
+        <label for="volume">Volume (0 to 100):</label>
+        <input
+          type="range"
+          id="volume"
+          name="volume"
+          min="0"
+          max="100"
+          step="10"
+          required
+        />
+        <br /><br />
+
+        <!-- Time Picker -->
+        <label for="alarm">Set Alarm:</label>
+        <input
+          type="time"
+          id="alarm"
+          name="alarm"
+          min="06:00"
+          max="22:00"
+          required
+        />
+        <br /><br />
+
+        <!-- Week Picker -->
+        <label for="week">Select Week:</label>
+        <input
+          type="week"
+          id="week"
+          name="week"
+          min="2024-W01"
+          max="2024-W52"
+          required
+        />
+        <br /><br />
+
+        <!-- File Upload -->
+        <label for="resume">Upload your resume (PDF only):</label>
+        <input type="file" id="resume" name="resume" accept=".pdf" required />
+        <br /><br />
+
+        <!-- Hidden Field -->
+        <input type="hidden" id="userid" name="userid" value="12345" />
+        <br /><br />
+
+        <!-- Image Submit -->
+        <label for="search">Search with Image:</label>
+        <input
+          type="image"
+          src="assets/cat-lying-down.jpg"
+          alt="Search"
+          width="50"
+          height="50"
+        />
+
+        <br /><br />
+
+        <!-- Telephone -->
+        <label for="tel">Telephone (Format: 123-456-7890):</label>
+        <input
+          type="tel"
+          id="tel"
+          name="tel"
+          pattern="\d{3}-\d{3}-\d{4}"
+          placeholder="123-456-7890"
+          title="Phone number must be in the format: 123-456-7890"
+          required
+        />
+
+        <br /><br />
+
+        <!-- URL Input -->
+        <label for="website">Website:</label>
+        <input
+          type="url"
+          id="website"
+          name="website"
+          placeholder="https://example.com"
+          required
+        />
+        <br /><br />
+      </fieldset>
+
+      <!-- Submit and Reset Buttons -->
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

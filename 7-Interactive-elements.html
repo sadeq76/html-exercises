@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive HTML Tags</title>
+  </head>
+  <body>
+    <h1>Interactive HTML Tags</h1>
+
+    <!-- The details tag allows expandable content -->
+    <details>
+      <summary>More Information</summary>
+      This is additional content revealed when the details tag is clicked.
+    </details>
+
+    <!-- The dialog tag creates modal dialogs -->
+    <button onclick="document.getElementById('myDialog').showModal()">
+      Open Dialog
+    </button>
+    <dialog id="myDialog">
+      <p>This is a dialog box.</p>
+      <button onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+
+    <!-- The progress tag shows task progress -->
+    <label>Task Progress:</label>
+    <progress value="70" max="100"></progress>
+
+    <!-- The meter tag shows scalar measurements -->
+    <label>Battery Level:</label>
+    <meter value="0.8">80%</meter>
+  </body>
+</html>
